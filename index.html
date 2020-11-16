@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Click Speed Tester</title>
+    <link rel="icon" href="https://icon-library.com/images/mouse-click-icon-png/mouse-click-icon-png-17.jpg">
+    <style>
+      button.fade:hover, button.fade:active {background-color: 	#DCDCDC;}
+      .disable-select {
+        user-select: none; /* supported by Chrome and Opera */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+      }
+
+      .custom-text {
+        font-family: Tahoma, Geneva, sans-serif;
+      }
+
+      .no-border {
+        border: None;
+      }
+
+      .clickable {
+        cursor: pointer
+      }
+    </style>
+  </head>
+  <body class="disable-select">
+    <script src="script.js"></script>
+    <center>
+      <p id="time" class="custom-text" style="font-size: 75px">Timer</p>
+      <p id="clickcounter" class="custom-text" style="font-size: 56px">0 clicks</p>
+      
+      <input id="custom_second" class="no-border custom-text" placeholder="Seconds" style="font-size: 56px" type="text" maxlength="3" minlength="1" size="7"></input>
+      <br>
+
+      <button style="font-size: 56px" class="fade no-border custom-text clickable" onclick="start()">Start</button>
+      <button class="fade no-border custom-text clickable" style="font-size: 56px" onclick="stop()">Stop</button>
+
+      <p id="clicker" class="custom-text clickable" style="font-size: 56px; padding: 0px 0px" onclick="addClick()"></p>
+    </center>
+  </body>
+</html>
